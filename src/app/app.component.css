@@ -1,0 +1,36 @@
+.link {
+    font-size: 20px;
+    margin-top: 50px;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    width: 100vw;
+    height: 4vw;
+    background-color: yellowgreen;
+}
+
+.nav-items {
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    margin: 15px;
+}
+
+.nav-items:hover {
+    font-size: 25px;
+    background-color: yellow;
+    cursor: pointer;
+    text-align: center;
+}
+
+.selected {
+    font-size: 25px;
+    background-color: yellow;
+    cursor: pointer;
+    text-align: center;
+}
