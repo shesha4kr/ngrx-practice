@@ -1,0 +1,12 @@
+span {
+    margin-top: 20px;
+}
+
+p-button {
+    text-align: center;
+}
+
+.error {
+    font: 20px;
+    color: red;
+}

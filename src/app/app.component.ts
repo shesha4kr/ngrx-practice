@@ -24,6 +24,7 @@ export class AppComponent {
   }
 
   posts() {
+    this.router.navigate(['/posts']);
     document.getElementById('home')?.classList.remove('selected');
     document.getElementById('counter')?.classList.remove('selected');
     document.getElementById('posts')?.classList.add('selected');

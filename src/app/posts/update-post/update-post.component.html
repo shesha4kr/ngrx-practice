@@ -1,0 +1,28 @@
+<h1>Update Post</h1>
+<form [formGroup]="updatePostForm">
+    <span class="p-float-label">
+        <input id="float-input" type="text" pInputText formControlName="id" (input)="checkToEnableBtn()">
+        <label for=" float-input">Enter ID</label>
+        <div class="error">
+            {{showIdErrorMsg()}}
+        </div>
+    </span>
+
+    <span class="p-float-label">
+        <input id="float-input" type="text" pInputText formControlName="title" (input)="checkToEnableBtn()">
+        <label for="float-input">Enter Title</label>
+        <div class="error">
+            {{showTitleErrorMsg()}}
+        </div>
+    </span>
+
+    <span class="p-float-label">
+        <input id="float-input" type="text" pInputText formControlName="description" (input)="checkToEnableBtn()">
+        <label for="float-input">Enter Description</label>
+        <div class="error">
+            {{showDescErrorMsg()}}
+        </div>
+    </span>
+
+    <p-button label="Update Post" (click)="updatePost()" [disabled]="!enableUpdateBtn"></p-button>
+</form>

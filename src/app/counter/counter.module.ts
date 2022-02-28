@@ -24,7 +24,6 @@ import { counterReducer } from './state/counter.reducer';
     ButtonModule,
     InputNumberModule,
     FormsModule,
-    StoreModule.forRoot({ counter: counterReducer }),
   ],
   exports: [
     CounterComponent, CounterButtonsComponent, CounterOutputComponent

@@ -1,0 +1,51 @@
+<div class="flex">
+
+    <div class="posts">
+        <table *ngIf="(posts$ | async)?.length">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>TITLE</th>
+                    <th>DESCRIPTION</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let post of posts$ | async">
+                    <td>{{post.id}}</td>
+                    <td>{{post.title}}</td>
+                    <td>{{post.description}}</td>
+                    <td>
+                        <p-button styleClass="p-button-sm" label="Update" (click)="updatePost(post.id)"></p-button>
+                    </td>
+                    <td>
+                        <p-button styleClass="p-button-sm" label="Delete" (click)="deletePost(post.id)"></p-button>
+                    </td>
+                </tr>
+            </tbody>
+            <tr>
+                <td colspan="2">
+                    <p-button label="Add Post" (click)="addPost()"></p-button>
+                </td>
+
+                <td></td>
+
+                <td colspan="2">
+                    <p-button label="Clear All Posts" (click)="clearAllPosts()"></p-button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div class="no-post" *ngIf="!(posts$ | async)?.length">
+        No Posts Available.
+        <br>
+        <p-button label="Add Post" (click)="addPost()"></p-button>
+    </div>
+
+    <router-outlet></router-outlet>
+
+</div>

@@ -1,0 +1,29 @@
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 80%;
+    text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: lightblue;
+  }
+  
+tbody tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+thead tr {
+    background-color: lightcoral;
+    height: 50px;
+}
+
+.no-post {
+    font-size: 30px;
+    margin: 20px;
+}
+
+.flex {
+    display: flex;
+    margin: 50px;
+}
