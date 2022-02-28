@@ -5,7 +5,9 @@ import { environment } from 'src/environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CounterModule } from './counter/counter.module';
 import { HomeComponent } from './home/home.component';
+import { PostsModule } from './posts/posts.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { HomeComponent } from './home/home.component';
       logOnly: environment.production,
       autoPause: true,
     }),
+    CounterModule,
+    PostsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
